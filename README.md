@@ -1,6 +1,6 @@
 # CJS/AMD load time benchmark
 
-## Compare load times of two modules systems.
+## Compare load times of two module systems.
 
 It's basic benchmark that compares speed of both systems when used in development mode.
 
@@ -16,16 +16,16 @@ Generate dummy modules (by default 270)
 
     $ npm ru setup
 
-You can generate customise the number with:
+You can generate custom number of modules with:
 
     $ bin/generate --count=450
 
-Start server (defaults to 3000
+Start server (defaults to port 3000)
 
     $ npm start
 
-If you prefer to start on other port do:
+If you prefer other port, do:
 
     $ bin/start --port=8080
 
-See the benchmark on corresponding port
+Load the benchmark on corresponding port, e.g. [localhost:3000](http://localhost:3000)
