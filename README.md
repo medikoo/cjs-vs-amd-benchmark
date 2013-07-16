@@ -1,5 +1,7 @@
 # CJS/AMD load time benchmark
 
+Can be seen live at [medyk.org:3700](http://medyk.org:3700/)
+
 ## Compare load times of two module systems.
 
 It's basic benchmark that compares speed of both systems when used in development mode.
