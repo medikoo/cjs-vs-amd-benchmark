@@ -1,7 +1,7 @@
 {
   "name": "cjs-vs-amd-benchmark",
   "version": "0.1.0",
-  "description": "Compare CJS bundle against AMD load times",
+  "description": "Compare load times of CJS and AMD module systems",
   "main": "index.js",
   "keywords": [
     "commonjs",
@@ -13,6 +13,10 @@
     "comparision",
     "benchmark"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/medikoo/cjs-vs-amd-benchmark.git"
+  },
   "dependencies": {
     "commander": "~1.3.0",
     "connect": "~2.8.4",
@@ -22,6 +26,6 @@
     "fs2": "~0.1.5",
     "webmake": "~0.3.19"
   },
-  "author": "Mariusz Nowak",
+  "author": "Mariusz Nowak <medikoo+cjs@medikoo.com> (http://www.medikoo.com/)",
   "license": "MIT"
 }
