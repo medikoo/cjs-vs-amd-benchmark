@@ -6,7 +6,7 @@ Can be seen live at [medyk.org:3700](http://medyk.org:3700/)
 
 It's basic benchmark that compares speed of both systems when used in development mode.
 
-AMD modules are loaded with [require.js](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake)
+AMD modules are loaded with [RequireJS](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake)
 
 ### Installation
 
