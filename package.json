@@ -26,6 +26,10 @@
     "fs2": "~0.1.5",
     "webmake": "~0.3.19"
   },
+  "scripts": {
+    "setup": "node bin/generate",
+    "start": "node bin/start"
+  },
   "author": "Mariusz Nowak <medikoo+cjs@medikoo.com> (http://www.medikoo.com/)",
   "license": "MIT"
 }

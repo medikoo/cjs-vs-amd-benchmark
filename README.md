@@ -16,7 +16,7 @@ Install package:
 
 Generate dummy modules (by default 270)
 
-    $ npm ru setup
+    $ npm run setup
 
 You can generate custom number of modules with:
 
