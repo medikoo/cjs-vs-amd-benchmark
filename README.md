@@ -1,14 +1,15 @@
 # CJS/AMD load time benchmark
-
-To see **fair results** (adequate to your development environment) benchmark needs to be **installed and launched locally**.
-
-Still, you can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind that won't show results for _localhost_, _(on localhost with default number of generated modules, AMD version is usually loaded in about 1 second)._
-
 ## Compare load times of two module systems.
 
 It's basic benchmark that compares speed of both systems when used in development mode.
 
-AMD modules are loaded with [RequireJS](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake)
+AMD modules are loaded with [RequireJS](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake).
+
+There's no prebuild step, __in both cases modules are loaded on request__. In case of AMD, they're loaded asynchronously in a browser. In case of CJS when request occurs they're read from filesystem, bundled and served in one file.
+
+To see fair results (adequate to your development environment) **benchmark needs to be installed and launched locally**.  
+Still, you can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind that it's not the result you'll get on _localhost_.
+
 
 ### Installation
 
