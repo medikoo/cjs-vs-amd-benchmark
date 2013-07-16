@@ -1,3 +1,7 @@
+v0.1.2  --  2013.07.16
+Lowered default number of generated modules from 270 to 240
+270 still caused "too much recursion" errors on FF (RequireJS)
+
 v0.1.1  --  2013.07.16
 Configure missing tasks (setup and start)
 

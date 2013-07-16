@@ -1,6 +1,6 @@
 {
   "name": "cjs-vs-amd-benchmark",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Compare load times of CJS and AMD module systems",
   "main": "index.js",
   "keywords": [
