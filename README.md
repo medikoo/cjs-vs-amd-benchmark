@@ -1,6 +1,8 @@
 # CJS/AMD load time benchmark
 
-Can be seen live at [medyk.org:3700](http://medyk.org:3700/)
+To see **fair results** (adequate to your development environment) benchmark needs to be **installed and launched locally**.
+
+Still, you can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind that won't show results for _localhost_, _(on localhost, AMD version is usually loaded in about 1.5s)._
 
 ## Compare load times of two module systems.
 
