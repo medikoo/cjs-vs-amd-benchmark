@@ -1,11 +1,8 @@
 {
-  "name": "cjs-amd-load-comparision",
+  "name": "cjs-vs-amd-benchmark",
   "version": "0.1.0",
   "description": "Compare CJS bundle against AMD load times",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "commonjs",
     "cjs",
