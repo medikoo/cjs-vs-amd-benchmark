@@ -14,7 +14,7 @@ Install package:
 
     $ npm install cjs-vs-amd-benchmark
 
-Generate dummy modules (by default 270)
+Generate dummy modules (by default 240)
 
     $ npm run setup
 

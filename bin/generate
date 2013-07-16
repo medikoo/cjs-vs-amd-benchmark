@@ -9,6 +9,6 @@ var program = require('commander')
 	.option('--count <count>', "Modules count")
 	.parse(process.argv)
 
-  , count = Number(program.count) || 270;
+  , count = Number(program.count) || 240;
 
 require('../scripts/generate')(count).done();
