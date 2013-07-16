@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+'use strict';
+
+Error.stackTraceLimit = Infinity;
+
+var program = require('commander')
+	.usage('[options]')
+	.option('--port <port>', "Port at which to listen")
+	.parse(process.argv)
+
+  , port = Number(program.port) || 3000;
+
+require('../server')(port);
+console.log("Server listens on port " + port);

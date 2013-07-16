@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+'use strict';
+
+Error.stackTraceLimit = Infinity;
+
+var program = require('commander')
+	.usage('[options]')
+	.option('--count <count>', "Modules count")
+	.parse(process.argv)
+
+  , count = Number(program.count) || 270;
+
+require('../scripts/generate')(count).done();
