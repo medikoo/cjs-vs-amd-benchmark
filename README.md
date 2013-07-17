@@ -3,7 +3,7 @@
 
 It's basic benchmark that compares speed of both systems when used in development mode.
 
-Main point is to prove that server-side generation of a bundle on request is not necessarily slower than loading modules asynchronously from the browser. It's actually opposite and difference can be significant. See the [results](#results) section for numbers.
+__Main point is to prove that server-side generation of a bundle on request is not necessarily slower than loading modules asynchronously from the browser. It's actually opposite and difference can be significant. See the [results](#results) section for numbers.__
 
 AMD modules are loaded with [RequireJS](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake).
 
