@@ -44,7 +44,7 @@ Load the benchmark on corresponding port, e.g. [localhost:3000](http://localhost
 
 Following load times were measured on 2008 MBP with local setups of Node.js and Nginx server.
 
-Results show that in general AMD resolution is slower, but with well configured HTTP server it can match the speed of CJS resolution in some browsers (see Nginx and Chrome results for AMD).
+Conclusion is that in general AMD resolution is slower, but with well configured HTTP server it can match the speed of CJS resolution in some browsers (see Nginx and Chrome results for AMD).
 
 Each number is average of 5 runs.
 
