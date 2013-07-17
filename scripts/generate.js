@@ -6,42 +6,34 @@ var deferred  = require('deferred')
   , writeFile = require('fs2/lib/write-file')
 
   , cjsRoot = resolve(__dirname, '../cjs-modules')
-  , cjsTpl = '\'use strict\'\n\nrequire(\'./$PATH$\');\n'
+  , cjsTpl = '\'use strict\';\n\n$DEPS$\n'
 
   , amdRoot = resolve(__dirname, '../public/amd-modules')
-  , amdTpl = 'define([\'amd-modules/$PATH$\'], function (a) '
+  , amdTpl = 'define([$DEPS$], function () '
 	+ '{\n\t\'use strict\';\n});\n'
 
+  , generate, cjsStringify, amdStringify;
 
-  , generate, updatePublicCount;
-
-generate = function (total, tpl, root) {
-	var count = 2, current = 'start';
-
-	return (function self() {
-		var nu, last;
-		if (!(count < total)) return;
-		nu = String(count++);
-		last = (!(count < total));
-		return writeFile(resolve(root, current + '.js'),
-			last ? '' : tpl.replace('$PATH$', nu))(function () {
-				current = nu;
-				return self(tpl);
-			});
-	}());
+cjsStringify = function (deps) {
+	return deps.map(function (dep) {
+		return 'require(\'./' + dep + '\');';
+	}).join('\n');
 };
 
-updatePublicCount = function (name, total) {
-	var filename = resolve(__dirname, '../public/' + name + '.html');
+amdStringify = function (deps) {
+	return deps.map(function (dep) {
+		return '\'amd-modules/' + dep + '\'';
+	}).join(',');
+};
 
-	return readFile(filename)(function (content) {
-		content = String(content).replace(/"count">\d+/, '"count">' + total);
-		return writeFile(filename, content);
+generate = function (path, tpl, stringify, map) {
+	return deferred.map(Object.keys(map), function (name) {
+		return writeFile(resolve(path, name + '.js'),
+			tpl.replace('$DEPS$', stringify(map[name])));
 	});
 };
 
-module.exports = function (total) {
-	return deferred(generate(total, cjsTpl, cjsRoot),
-		generate(total, amdTpl, amdRoot), updatePublicCount('amd', total),
-		updatePublicCount('cjs', total));
+module.exports = function (map) {
+	return deferred(generate(cjsRoot, cjsTpl, cjsStringify, map),
+		generate(amdRoot, amdTpl, amdStringify, map));
 };

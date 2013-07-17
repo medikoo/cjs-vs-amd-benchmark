@@ -4,11 +4,14 @@
 
 Error.stackTraceLimit = Infinity;
 
+// Prevent EMFILE errors
+require('fs2/lib/descriptors-handler')();
+
 var program = require('commander')
 	.usage('[options]')
-	.option('--count <count>', "Modules count")
+	.option('--mapPath <path>', "Path to modules map")
 	.parse(process.argv)
 
-  , count = Number(program.count) || 240;
+  , mapPath = program.mapPath || './default-deps-map';
 
-require('../scripts/generate')(count).done();
+require('../scripts/generate')(require(mapPath)).done();

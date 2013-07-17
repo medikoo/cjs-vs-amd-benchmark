@@ -2,7 +2,7 @@
 
 var start, end, p;
 
-require('../cjs-modules/start');
+require('../cjs-modules/0');
 
 end = Number(new Date());
 start = window.startTime;

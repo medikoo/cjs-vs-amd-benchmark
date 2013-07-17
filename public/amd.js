@@ -1,4 +1,4 @@
-require(['./amd-modules/start'], function (a) {
+require(['./amd-modules/0'], function (a) {
 	var start, end;
 
 	end = Number(new Date());
