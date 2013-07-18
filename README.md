@@ -3,7 +3,7 @@
 
 It's basic benchmark that compares speed of both systems when used in development mode.
 
-Main point is to prove that on request server-side generation of a bundle is not necessarily slower than loading modules asynchronously from the browser. It's actually opposite and difference can be significant. See the [results](#results) section for numbers.
+__Main point is to prove that server-side generation of a bundle on request is not necessarily slower than loading modules asynchronously from the browser. It's actually opposite and difference can be significant. See the [results](#results) section for numbers.__
 
 AMD modules are loaded with [RequireJS](http://requirejs.org/) and CommonJS modules are bundled on request with [Webmake](https://github.com/medikoo/modules-webmake#modules-webmake).
 
@@ -11,7 +11,7 @@ There's no prebuild step, __in both cases modules are loaded/bundled on request_
 
 To see fair results (adequate to your development environment) **benchmark needs to be installed and launched locally**.  
 
-_You can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind it's backed with basic Node.js server setup (not very efficient for AMD), and due to extra latency results you'll see, will be worse than when running same on your localhost._
+_You can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind it's backed with basic Node.js server setup (not very efficient for AMD), and due to extra latency, results will be worse than when running same on your localhost._
 
 
 ### Installation
@@ -42,11 +42,7 @@ Load the benchmark on corresponding port, e.g. [localhost:3000](http://localhost
 
 ### Results
 
-Following load times were measured on 2008 MBP with local setups of Node.js and Nginx server.
-
-Results show that in general AMD resolution is slower, but with well configured HTTP server it can match the speed of CJS resolution in some browsers (see Nginx and Chrome results for AMD).
-
-Each number is average of 5 runs.
+Following load times were measured on 2008 MBP with local setups of Node.js and Nginx server, each number is average of 5 runs.
 
 <table>
     <thead><tr><td></td>
@@ -72,3 +68,5 @@ Each number is average of 5 runs.
 		</tr>
 	</tbody>
 </table>
+
+Conclusion is that in general AMD resolution is slower, but with well configured HTTP server it can match the speed of CJS resolution in some browsers (see Nginx and Chrome results for AMD).
