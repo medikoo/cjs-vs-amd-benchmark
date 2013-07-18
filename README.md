@@ -50,8 +50,8 @@ Nginx was configured with `Cache-Control: no-cache` header, so browser always ch
 
 <table>
     <thead><tr><td></td>
-    <th>Node.js v0.10.13<br /><br />Google Chrome</th>
-		<th>Node.js v.0.10.13<br />Firefox</th>
+    		<th>Node.js v0.10.13<br />Google Chrome</th>
+		<th>Node.js v0.10.13<br />Firefox</th>
 		<th>Nginx v1.0.10<br />Google Chrome</th>
 		<th>Nginx v1.0.10<br />Firefox</th>
 	</tr></thead>
