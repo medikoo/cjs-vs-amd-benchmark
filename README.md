@@ -44,12 +44,16 @@ Load the benchmark on corresponding port, e.g. [localhost:3000](http://localhost
 
 Following load times were measured on 2008 MBP with local setups of Node.js and Nginx server, each number is average of 5 runs.
 
+Node.js server setup was very basic, no clusters involved, so concurrency was limited (hence not great results for AMD).
+
+Nginx was configured with `Cache-Control: no-cache` header, so browser always checks with the server whether new version of module is available.
+
 <table>
     <thead><tr><td></td>
-    	<th>Node.js<br />(basic setup on v.0.10.13)<br />Google Chrome</th>
-		<th>Node.js<br />(basic setup on v.0.10.13)<br />Firefox</th>
-		<th>Nginx (v1.0.10)<br />Google Chrome</th>
-		<th>Nginx (v1.0.10)<br />Firefox</th>
+    <th>Node.js v0.10.13<br /><br />Google Chrome</th>
+		<th>Node.js v.0.10.13<br />Firefox</th>
+		<th>Nginx v1.0.10<br />Google Chrome</th>
+		<th>Nginx v1.0.10<br />Firefox</th>
 	</tr></thead>
 	<tbody>
 		<tr>
@@ -63,10 +67,8 @@ Following load times were measured on 2008 MBP with local setups of Node.js and 
 			<td>AMD (via <a href="http://requirejs.org/">RequireJS</a>)</td>
 			<td>896ms</td>
 			<td>548ms</td>
-			<td>280ms</td>
-			<td>487ms</td>
+			<td>367ms</td>
+			<td>569ms</td>
 		</tr>
 	</tbody>
 </table>
-
-Conclusion is that in general AMD resolution is slower, but with well configured HTTP server it can match the speed of CJS resolution in some browsers (see Nginx and Chrome results for AMD).
