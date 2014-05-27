@@ -3,7 +3,7 @@
 var count   = require('es5-ext/lib/Object/count')
   , resolve = require('path').resolve
   , webmake = require('webmake')
-  , encode  = require('ent').encode
+  , encode  = require('he').encode
 
   , stringify = JSON.stringify
   , path = resolve(__dirname, 'cjs-modules/main.js')
