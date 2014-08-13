@@ -11,9 +11,6 @@ There's no prebuild step, __in both cases modules are loaded/bundled on request_
 
 To see fair results (adequate to your development environment) **benchmark needs to be installed and launched locally**.  
 
-_You can also check it working at [medyk.org:3700](http://medyk.org:3700/), but mind it's backed with basic Node.js server setup (not very efficient for AMD), and due to extra latency, results will be worse than when running same on your localhost._
-
-
 ### Installation
 
 Install package:
